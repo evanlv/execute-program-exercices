@@ -6,15 +6,8 @@ const arr5 = ["a", "b"]
 const arr6 = ["", "", ""]
 const arr7 = []
 
-const join = (arr, separator) => {
-  if (arr.length === 0) {
-    return ""
-  }
-
-  return arr.reduce((acc, x) => {
-    return `${acc}${separator}${x}`
-  })
-}
+const join = (arr, sep) =>
+  arr.length ? arr.reduce((xs, x) => `${xs}${sep}${x}`) : ""
 
 console.log(join(arr1, ","))
 console.log(join(arr2, ","))
