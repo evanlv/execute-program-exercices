@@ -7,15 +7,19 @@ const arr6 = ["", "", ""]
 const arr7 = []
 
 const join = (arr, separator) => {
-  arr.reduce((acc, joinedItem) => {
-    return acc.concat(joinedItem)
-  }, "")
+  if (arr.length === 0) {
+    return ""
+  }
+
+  return arr.reduce((acc, x) => {
+    return `${acc}${separator}${x}`
+  })
 }
 
-// console.log(join(arr1, ","))
+console.log(join(arr1, ","))
 console.log(join(arr2, ","))
-// console.log(join(arr3, ""))
-// console.log(join(arr4, "x"))
-// console.log(join(arr5, "COMMA"))
-// console.log(join(arr6, ","))
-// console.log(join(arr7, ","))
+console.log(join(arr3, ""))
+console.log(join(arr4, "x"))
+console.log(join(arr5, "COMMA"))
+console.log(join(arr6, ","))
+console.log(join(arr7, ","))
