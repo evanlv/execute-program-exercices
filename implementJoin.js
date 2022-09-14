@@ -6,15 +6,16 @@ const arr5 = ["a", "b"]
 const arr6 = ["", "", ""]
 const arr7 = []
 
-const join = (arr, separator) =>
+const join = (arr, separator) => {
   arr.reduce((acc, joinedItem) => {
-    console.log(joinedItem.concat(separator))
-  }, [])
+    return acc.concat(joinedItem)
+  }, "")
+}
 
 // console.log(join(arr1, ","))
 console.log(join(arr2, ","))
 // console.log(join(arr3, ""))
-console.log(join(arr4, "x"))
+// console.log(join(arr4, "x"))
 // console.log(join(arr5, "COMMA"))
 // console.log(join(arr6, ","))
 // console.log(join(arr7, ","))
