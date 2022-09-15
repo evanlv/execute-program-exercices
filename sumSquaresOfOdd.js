@@ -8,13 +8,11 @@ const arr7 = [1, 2, 3, 4, 5]
 const arr8 = [2, 2, 2, 2]
 const arr9 = []
 
-const f = (arr) => {
-  const oddNumbers = arr
+const f = (arr) =>
+  arr
     .filter((value) => value % 2 === 1)
-    .map((oddNumber) => Math.pow(oddNumber, 2))
+    .map((oddNumber) => oddNumber ** 2)
     .reduce((acc, squaredNumber) => acc + squaredNumber, 0)
-  return oddNumbers
-}
 
 console.log(f(arr1))
 console.log(f(arr2))

@@ -1,23 +1,15 @@
-const arr1 = ["a"];
-const arr2 = ["a", "b"];
-const arr3 = ["a", "b", "c"];
-const arr4 = ["a", "b", "c", "d"];
-const arr5 = ["a", "b"];
-const arr6 = ["", "", ""];
-const arr7 = [];
+const arr1 = [1, 2, 3];
+const arr2 = [1, 2, 3];
+const arr3 = [1, 2, 3];
+const arr4 = [null, undefined];
+const arr5 = [];
 
-const filter = (arr, separator) => {
-  console.log(arr.slice(0, -1));
-  arr.reduce((acc, joinedItem) => {
-    const result = acc.concat(...joinedItem, separator);
-    return result;
-  }, "");
+const filter = (arr, callback) => {
+  return arr.reduce((xs, x) => {}, []);
 };
 
-console.log(join(arr1, ","));
-console.log(join(arr2, ","));
-// console.log(join(arr3, ""));
-// console.log(join(arr4, "x"));
-// console.log(join(arr5, "COMMA"));
-// console.log(join(arr6, ","));
-// console.log(join(arr7, ","));
+console.log(filter([1, 2, 3], (num) => num >= 0));
+console.log(filter([1, 2, 3], (num) => num > 1));
+console.log(filter([1, 2, 3], (num) => num > 5));
+console.log(filter([null, undefined], (num) => true));
+console.log(filter([], (num) => true));
