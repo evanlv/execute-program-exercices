@@ -1,13 +1,13 @@
 const allTrue = (values) => {
-  return values.length
-    ? values.reduce((xs, x) => {
-        if (x === false) {
-          return false;
-        }
-
-        return xs ? true : false;
-      })
-    : true;
+  if (values.length) {
+    return values.reduce((xs, x) => {
+      if (x === false) {
+        return false;
+      }
+      return xs ? true : false;
+    });
+  }
+  return true;
 };
 
 // const allTrueOneLiner = (values) => values.reduce((acc, x) => acc && x, true);
